@@ -114,5 +114,355 @@ INSERT INTO `wishlist` (`wish_id`, `users_id`, `book_id`, `created_at`) VALUES
 (3, 3, 16, '2024-11-27 17:17:53'),
 (4, 1, 13, '2024-11-27 17:18:03'),
 (5, 1, 17, '2024-11-27 17:18:15');
+
+
+CREATE TABLE `chapters` (
+  `id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `chapters`
+--
+
+INSERT INTO `chapters` (`id`, `group_id`, `title`, `content`, `author`, `created_at`) VALUES
+(1, 1, 'A', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n\r\n\r\nWhere does it come from?\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\r\n', 'Amasha', '2024-11-27 03:36:52'),
+(2, 1, 'B', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n\r\n\r\nWhere does it come from?\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.', 'Amasha', '2024-11-27 23:54:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `communities`
+--
+
+CREATE TABLE `communities` (
+  `community_id` int(11) NOT NULL,
+  `community_name` varchar(100) NOT NULL,
+  `community_type` varchar(50) NOT NULL,
+  `community_description` text DEFAULT NULL,
+  `community_image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `communities`
+--
+
+INSERT INTO `communities` (`community_id`, `community_name`, `community_type`, `community_description`, `community_image`, `created_at`) VALUES
+(1, 'Bookmarks & Brevity', 'private', 'Bookmarks & Brevity is a cozy, inviting book club where readers gather to explore and discuss captivating stories, one chapter at a time. We embrace the beauty of brevity, diving into thought-provoking reads and savoring the power of concise storytelling. Whether you\'re a casual reader or a literary enthusiast, join us as we turn pages, share insights, and celebrate the magic of books over a cup of coffee or tea.', 'book3.jpg', '2024-11-21 01:08:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `community_members`
+--
+
+CREATE TABLE `community_members` (
+  `id` int(11) NOT NULL,
+  `community_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `joined_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `deletion_requests`
+--
+
+CREATE TABLE `deletion_requests` (
+  `request_id` int(11) NOT NULL,
+  `community_id` int(11) NOT NULL,
+  `requested_by` int(11) NOT NULL,
+  `reason` text DEFAULT NULL,
+  `status` enum('Pending','Approved','Rejected') DEFAULT 'Pending',
+  `request_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `community_events` (
+  `event_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `reason` text NOT NULL,
+  `place` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `community_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `community_events` (`event_id`, `title`, `reason`, `place`, `date`, `time`, `community_id`) VALUES
+(1, 'ABC', 'ghjdkstryueiowsijxbc', 'Colombo', '2024-12-10', '10:43:00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_participants`
+--
+
+CREATE TABLE `event_participants` (
+  `id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `event_participants`
+--
+
+INSERT INTO `event_participants` (`id`, `event_id`, `user_id`) VALUES
+(1, 1, 1),
+(2, 1, 1),
+(3, 1, 1),
+(4, 1, 1),
+(5, 1, 1),
+(6, 1, 1),
+(7, 1, 1),
+(8, 1, 1),
+(9, 1, 1),
+(10, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts1`
+--
+
+CREATE TABLE `posts1` (
+  `post_id` int(11) NOT NULL,
+  `community_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `posts1`
+--
+
+INSERT INTO `posts1` (`post_id`, `community_id`, `user_id`, `title`, `content`, `image`, `created_at`) VALUES
+(1, 1, 1, 'abcd', 'nq3ntpu2thp5ngjnnekl;', '', '2024-11-23 05:10:23'),
+(2, 1, 1, 'abcd', 'hkshbqljiojqpoisjcn', '', '2024-11-23 05:30:17'),
+(3, 1, 1, 'abcde', 'fcgvhbnjkmhygtfdsedtfygh', NULL, '2024-11-23 05:41:41'),
+(4, 1, 1, 'abcder', 'gfdfgyhujifcvgbn', '../images/posts/67416b27295454.32867183.jpg', '2024-11-23 05:41:59');
+
+-- --------------------------------------------------------
+
+
+INSERT INTO `users` (`users_id`, `users_email`, `users_name`, `users_password`, `users_address`, `users_contactNumber`, `users_role`) VALUES
+(1, 'amasha@gmail.com', 'Amasha', '$2y$10$JGd03zA3zMT.pSo9u9k6Q.hPb1RKOrGJqFX57WZ.eOUVB72Bfj6R.', 'Galle', '0778349102', 'community_ambassador');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `writing_groups`
+--
+
+CREATE TABLE `writing_groups` (
+  `id` int(11) NOT NULL,
+  `community_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `writing_groups`
+--
+
+INSERT INTO `writing_groups` (`id`, `community_id`, `name`, `created_at`) VALUES
+(1, 1, 'ABCD', '2024-11-26 00:54:21'),
+(2, 1, 'ABCD', '2024-11-26 00:56:16');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `chapters`
+--
+ALTER TABLE `chapters`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `group_id` (`group_id`);
+
+--
+-- Indexes for table `communities`
+--
+ALTER TABLE `communities`
+  ADD PRIMARY KEY (`community_id`);
+
+--
+-- Indexes for table `community_members`
+--
+ALTER TABLE `community_members`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `community_id` (`community_id`,`user_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `deletion_requests`
+--
+ALTER TABLE `deletion_requests`
+  ADD PRIMARY KEY (`request_id`),
+  ADD KEY `community_id` (`community_id`),
+  ADD KEY `requested_by` (`requested_by`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`event_id`),
+  ADD KEY `community_id` (`community_id`);
+
+--
+-- Indexes for table `event_participants`
+--
+ALTER TABLE `event_participants`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `event_id` (`event_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `posts1`
+--
+ALTER TABLE `posts1`
+  ADD PRIMARY KEY (`post_id`),
+  ADD KEY `fk_community` (`community_id`),
+  ADD KEY `fk_user` (`user_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`users_id`),
+  ADD UNIQUE KEY `users_email` (`users_email`);
+
+--
+-- Indexes for table `writing_groups`
+--
+ALTER TABLE `writing_groups`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `community_id` (`community_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `chapters`
+--
+ALTER TABLE `chapters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `communities`
+--
+ALTER TABLE `communities`
+  MODIFY `community_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `community_members`
+--
+ALTER TABLE `community_members`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `deletion_requests`
+--
+ALTER TABLE `deletion_requests`
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `event_participants`
+--
+ALTER TABLE `event_participants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `posts1`
+--
+ALTER TABLE `posts1`
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `writing_groups`
+--
+ALTER TABLE `writing_groups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `chapters`
+--
+ALTER TABLE `chapters`
+  ADD CONSTRAINT `chapters_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `writing_groups` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `community_members`
+--
+ALTER TABLE `community_members`
+  ADD CONSTRAINT `community_members_ibfk_1` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `community_members_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`users_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `deletion_requests`
+--
+ALTER TABLE `deletion_requests`
+  ADD CONSTRAINT `deletion_requests_ibfk_1` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `deletion_requests_ibfk_2` FOREIGN KEY (`requested_by`) REFERENCES `users` (`users_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `events`
+--
+ALTER TABLE `events`
+  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `event_participants`
+--
+ALTER TABLE `event_participants`
+  ADD CONSTRAINT `event_participants_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `events` (`event_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `event_participants_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`users_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `posts1`
+--
+ALTER TABLE `posts1`
+  ADD CONSTRAINT `fk_community` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`users_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `writing_groups`
+--
+ALTER TABLE `writing_groups`
+  ADD CONSTRAINT `writing_groups_ibfk_1` FOREIGN KEY (`community_id`) REFERENCES `communities` (`community_id`) ON DELETE CASCADE;
 -- Commit
 COMMIT;
