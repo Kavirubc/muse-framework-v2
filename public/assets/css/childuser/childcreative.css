@@ -1,0 +1,59 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5faff;
+}
+
+
+.hero {
+  background-image: url('https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ .hero h1 {
+    font-size: 48px;
+    margin: 0;
+    color: white;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.news-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.news-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.news-item .news-content {
+    flex: 1;
+}
+.news-item .news-content h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+.news-item .news-content p {
+    margin: 0;
+}
