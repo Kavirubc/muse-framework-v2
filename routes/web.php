@@ -68,6 +68,8 @@ Route::get('muse/child-creative-poem-writing', ChildController::class, 'childCre
 Route::name('muse/child-creative-song-writing', 'childCreSong');
 Route::get('muse/child-creative-song-writing', ChildController::class, 'childCreSong');
 
+Route::name('muse/child-creative-writer', 'childCreCha');
+Route::get('muse/child-creative-writer', ChildController::class, 'childCreCha');
 
 
 // ------------------------ Amasha --------------------------//

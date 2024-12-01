@@ -1,0 +1,150 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+/* Writing Group Container */
+.writing-group-posts-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #34495e;
+    margin-bottom: 30px;
+}
+
+/* Chapters List (Novel Style) */
+.chapters-list {
+    display: block;
+    margin-top: 20px;
+}
+
+.chapter {
+    padding: 20px;
+    border-bottom: 2px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.chapter:last-child {
+    border-bottom: none;
+}
+
+.chapter img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+
+.chapter h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.chapter p {
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.chapter .author,
+.chapter .timestamp {
+    font-size: 14px;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Create Chapter Button */
+.create-chapter-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.create-chapter-btn:hover {
+    background-color: #2980b9;
+}
+
+#chapter-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+#chapter-modal .modal-content {
+    background: white;
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.modal-content button {
+    padding: 10px 20px;
+    background: #266bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modal-content button:hover {
+    background: #294cff;
+}
+.modal-content .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+.request-sent {
+    text-align: center;
+    padding: 20px;
+    color: #000103;
+    display: none;
+}

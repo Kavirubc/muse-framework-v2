@@ -66,4 +66,9 @@ class ChildController extends Controller
     {
         view('childuser/childCreSong.php');
     }
+
+    public function childCreCha()
+    {
+        view('childuser/childCreCha.php');
+    }
 }
