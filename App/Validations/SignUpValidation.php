@@ -46,17 +46,25 @@ class SignUpValidation
             $errors[] = 'invalidEmail';
         }
         if (!$this->checkUser()) {
-            $errors[] = 'emailTaken';
+            $errors[] = 'isEmailAvailable';
         }
         if (!$this->pwdMatch()) {
             $errors[] = 'passwordmismatch';
         }
+
+        print_r($this->name);
+        print_r($this->email);
+
+        
 
         if (!empty($errors)) {
             // Convert errors array to a query string
             $errorString = implode(',', $errors);
             redirect(route("signup") . "?errors=$errorString");
         }
+
+        // print_r($this->name);
+        // print_r($this->email);
 
         // If all validations pass, set the user in the database
         $newUser = new User();
@@ -76,13 +84,13 @@ class SignUpValidation
     private function checkUser(): bool {
 
         $checkUser = new User();
-        $stmt = $checkUser->connection->prepare('SELECT users_id FROM ? WHERE users_email = ?;');
+        $stmt = $checkUser->conn->prepare("SELECT users_id FROM `$checkUser->table` WHERE users_email = ?;");
     
-        if (!$stmt->execute([$checkUser->table, $this->email])) {
+        if (!$stmt->execute([$this->email])) {
             redirect(route("signup") . "?errors=stmtfailed");
         }
     
-        return $stmt->rowCount() > 0; // Return true if the user exists
+        return $stmt->rowCount() == 0; // Return true if the user exists
     }
 
     /**

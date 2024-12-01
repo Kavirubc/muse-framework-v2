@@ -6,6 +6,7 @@ use Kaviru\MuseCore\Database;
 
 class User extends Database
 {
+    public $conn;
     public $table = 'users';
     protected $fillable = ['users_name', 'users_email', 'users_password', 'users_address', 'users_contactNumber'];
     protected $readable = ['users_name', 'users_email', 'users_password', 'users_address', 'users_contactNumber'];
@@ -21,11 +22,12 @@ class User extends Database
     public string $users_name;
     public string $users_email;
     public string $users_password;
-    public int $users_address;
-    public int $users_contactNumber;
+    public string $users_address;
+    public string $users_contactNumber;
 
     public function __construct()
     {
         parent::__construct();
+        $this->conn = $this->connection;
     }
 }
