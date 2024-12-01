@@ -29,7 +29,7 @@
     <img alt="A colorful book cover with a magical theme" height="150" src="https://storage.googleapis.com/a1aa/image/qf70Mlj8NsymPC19VFcgONBKVBcHGnp6WbdCaHWhRN0pe60TA.jpg" width="150"/>
     <div class="news-content">
      <h3>
-      New Book Release: The Magic Forest
+     <a href="<?= route('childRelease') ?>">New Book Release: The Magic Forest</a>
      </h3>
      <p>
       Discover the enchanting world of The Magic Forest, a new book by acclaimed author Jane Doe.
@@ -40,7 +40,7 @@
     <img alt="creativity" height="150" src="https://images.pexels.com/photos/288100/pexels-photo-288100.jpeg" width="150"/>
     <div class="news-content">
      <h3>
-      Test creativity
+     <a href="<?= route('childCreative') ?>">Test creativity</a>
      </h3>
      <p>
       Creative life
@@ -51,7 +51,7 @@
     <img alt="A child reading a book under a tree" height="150" src="https://images.pexels.com/photos/4609046/pexels-photo-4609046.jpeg" width="150"/>
     <div class="news-content">
      <h3>
-      Creative kids of the week
+     <a href="<?= route('childAward') ?>">Creative kids of the week</a>
      </h3>
      <p>
       Think Different!
@@ -62,7 +62,7 @@
     <img alt="A group of children listening to a storyteller" height="150" src="https://images.pexels.com/photos/2098604/pexels-photo-2098604.jpeg" width="150"/>
     <div class="news-content">
      <h3>
-      Award winning children books of the week
+     <a href="<?= route('childAuthorAward') ?>">Award winning children books of the week</a> 
      </h3>
      <p>
       Read before death
@@ -73,7 +73,7 @@
     <img alt="A stack of colorful children's books" height="150" src="https://storage.googleapis.com/a1aa/image/oNUjjPaai4LQM5LV7o47tw6PwZRm86eP8j0oqfZYh3xU960TA.jpg" width="150"/>
     <div class="news-content">
      <h3>
-      Top 10 Books for Kids
+     <a href="<?= route('childTopBooks') ?>">Top 10 Books for Kids</a> 
      </h3>
      <p>
       Check out our list of the top 10 books for kids this month. Find your next favorite read!
@@ -84,7 +84,7 @@
     <img alt="A stack of colorful children's books" height="150" src="https://images.pexels.com/photos/1820559/pexels-photo-1820559.jpeg" width="150"/>
     <div class="news-content">
      <h3>
-      Life story of an author
+     <a href="<?= route('childAuto') ?>">Life story of an author</a> 
      </h3>
      <p>
       Learn life from them

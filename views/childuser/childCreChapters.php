@@ -10,7 +10,7 @@
  <body>
  <?php include 'header.php'; ?>
   <div class="container">
-   <img alt="Hello'" class="header-image" height="300" src="https://images.pexels.com/photos/933255/pexels-photo-933255.jpeg" width="800"/>
+   <img alt="Hello'" class="header-image"  src="https://img.freepik.com/free-photo/childhood-young-boy-home_144627-39933.jpg" />
    <h1>
     Welcome to Your Creative Story Writing!
    </h1>

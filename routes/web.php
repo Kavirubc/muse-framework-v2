@@ -62,7 +62,7 @@ Route::get('muse/child-autobiography-details', ChildController::class, 'childAut
 Route::name('muse/child-creative-writing', 'childCreChapters');
 Route::get('muse/child-creative-writing', ChildController::class, 'childCreChapters');
 
-Route::name('muse/child-creative-poem-writing', 'childCrePeom');
+Route::name('muse/child-creative-poem-writing', 'childCrePoem');
 Route::get('muse/child-creative-poem-writing', ChildController::class, 'childCrePoem');
 
 Route::name('muse/child-creative-song-writing', 'childCreSong');
