@@ -1,0 +1,120 @@
+/* MyBooks Section */
+.mybooks {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mybooks h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+.book-grid {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow wrapping to a new row if cards exceed container width */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center-align the cards in the row */
+    margin: 50px auto 0px 20px; /* Center the grid on the page */
+    max-width: 1200px; /* Restrict the maximum width of the grid */
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Display 3 cards per row (adjust as needed) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-image-container {
+    width: 200px; /* Width of the square */
+    height: 200px; /* Height of the square */
+    overflow: hidden; /* Ensures the image fits within the square */
+    margin: 0 auto 15px;
+}
+
+.book-image {
+    width: 100%; /* Make the image fill the placeholder */
+    height: 100%; /* Maintain proportions */
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .book-card {
+        width: calc(50% - 20px); /* Show 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-card {
+        width: 100%; /* Show 1 card per row on very small screens */
+    }
+}
+
+
+.book-title {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.book-author, .book-description, .book-genre, .book-city, .book-price {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.action-buttons {
+    display: flex; /* Use flexbox to align buttons in a row */
+    justify-content: center; /* Center-align the buttons */
+    gap: 10px; /* Add spacing between the buttons */
+    margin-top: 15px; /* Add some margin above the buttons */
+}
+
+.edit-button,
+.delete-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #007bff; /* Blue for Edit */
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red for Delete */
+}
+
+.delete-button:hover {
+    background-color: #b02a37;
+}
+
+
+.no-books-message {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 500px;
+}
