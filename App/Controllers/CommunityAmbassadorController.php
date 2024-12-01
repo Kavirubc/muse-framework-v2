@@ -10,8 +10,6 @@ class CommunityAmbassadorController extends Controller
     {
         view('community_ambassador/communities1.php');
     }
-
-
     public function eventsGet()
     {
         view('community_ambassador/events.php');
