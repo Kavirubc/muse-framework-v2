@@ -1,0 +1,51 @@
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Link Styling */
+.sidebar nav ul li a {
+    color: #333; /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: block; /* Makes the entire list item clickable */
+    padding: 10px 0;
+    align-items: center;
+}
+
+
+.sidebar ul li a i {
+    margin-right: 8px; /* Adjust spacing */
+    font-size: 18px;   /* Adjust icon size */
+}
+
+
+.sidebar nav ul li a:hover {
+    color: #4a90e2; /* Changes color on hover */
+}
+
+/* Active Link Styling */
+.sidebar nav ul li.active a {
+    color: black;
+    font-weight: 600;
+}
+/* Sidebar Styling */
+.sidebar nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}

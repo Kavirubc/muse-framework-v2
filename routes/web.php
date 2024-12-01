@@ -53,7 +53,7 @@ Route::get('muse/child-author-award', ChildController::class, 'childAuthorAward'
 Route::name('muse/child-autobiography', 'childAuto');
 Route::get('muse/child-autobiography', ChildController::class, 'childAuto');
 
-Route::name('muse/child-top-book', 'childTopBooks');
+Route::name('muse/child-top-books', 'childTopBooks');
 Route::get('muse/child-top-books', ChildController::class, 'childTopBooks');
 
 Route::name('muse/child-autobiography-details', 'childAutoInside');
@@ -87,7 +87,8 @@ Route::get('muse/community-ambassador/eventDetails', CommunityAmbassadorControll
 Route::name('muse/community-ambassador/writingGroups', 'communityAmbassador.writingGroups');
 Route::get('muse/community-ambassador/writingGroups', CommunityAmbassadorController::class, 'writingGroupGet'); 
 
-Route::name('muse/community-ambassador/writingGroupPosts', 'communityAmbassador.writingGroupPosts'); 
+Route::name('muse/community-ambassador/writingGroupPosts', 'communityAmbassador.writingGroupPosts');
+Route::get('muse/community-ambassador/writingGroupPosts', CommunityAmbassadorController::class, 'writingGroupPostsGet');
 
 
 // ---------------------------------- Madara ------------------------------- //
