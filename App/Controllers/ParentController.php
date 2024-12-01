@@ -58,23 +58,25 @@ class ParentController extends Controller
     }
     
     public function signupPost()
+
     {
-        if(post("signupSubmit") ?? null !== null)
-        {
-            $email = post('email');
-            $name = post('name');
-            $password = post('password');
-            $confirmPassword = post('confirmPassword');
-            $address = post('address');
-            $contactNumber = post('contactNumber');
-
+        //echo post("signupSubmit");
+        if (isset($_POST['signupSubmit'])) {
+            $email = $_POST['email'];
+            $name = $_POST['name'];
+            $password = $_POST['password'];
+            $confirmPassword = $_POST['confirmPassword'];
+            $address = $_POST['address'];
+            $contactNumber = $_POST['contactNumber'];
+    
             $signup = new SignUpValidation($email, $name, $password, $confirmPassword, $address, $contactNumber);
-
-            //Running error handlers and user sign up
+    
+            // Running error handlers and user sign up
             $signup->signupUser();
-
-            //Going back to login page
-            redirect(route("login"));
+    
+            // Redirecting to login page
+            redirect(route('login'));
         }
-    }
+}
+
 }
