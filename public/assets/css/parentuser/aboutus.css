@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+
+.about-us-section {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.services-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3b50f9;
+    margin-bottom: 20px;
+}
+
+.services-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+
+}
+
+.service-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 0px 10px 0px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h2 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+.icon-placeholder {
+    width: 200px; /* Width of the circle */
+    height: 200px; /* Height of the circle */
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Ensures the image fits within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional background color */
+    margin: 0 auto 15px; /* Center the icon and add space below it */
+}
+
+.icon-placeholder img {
+    width: 100%; /* Make the image fill the placeholder */
+    height: 100%; /* Maintain proportions */
+    object-fit: cover; /* Ensures the image scales and crops properly */
+}

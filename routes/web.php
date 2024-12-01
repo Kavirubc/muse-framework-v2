@@ -4,6 +4,7 @@ use Kaviru\MuseCore\Route;
 use App\Controllers\AdminController;
 use App\Controllers\ChildController;
 use App\Controllers\PublicController;
+use App\Controllers\ParentController;
 use App\Controllers\CommunityAmbassadorController;
 
 /*  ----------------------------------
@@ -32,7 +33,7 @@ use App\Controllers\CommunityAmbassadorController;
 // Route::post('muse/admin/signup', AdminController::class, 'signupPost');
 
 
-// ----------------------gayashan------------------------//
+// ----------------------Gayashan------------------------//
 
 Route::name('muse/child-home', 'childHome');
 Route::get('muse/child-home', ChildController::class, 'childHome');
@@ -87,4 +88,25 @@ Route::name('muse/community-ambassador/writingGroups', 'communityAmbassador.writ
 Route::get('muse/community-ambassador/writingGroups', CommunityAmbassadorController::class, 'writingGroupGet'); 
 
 Route::name('muse/community-ambassador/writingGroupPosts', 'communityAmbassador.writingGroupPosts'); 
+
+
+// ---------------------------------- Madara ------------------------------- //
+
+Route::name('muse/home', 'home');
+Route::get('muse/home', ParentController::class, 'home');
+
+Route::name('muse/aboutus', 'aboutus');
+Route::get('muse/aboutus', ParentController::class, 'aboutus');
+
+Route::name('muse/whymuse', 'whymuse');
+Route::get('muse/whymuse', ParentController::class, 'whymuse');
+
+Route::name('muse/contactus', 'contactus');
+Route::get('muse/contactus', ParentController::class, 'contactus');
+
+Route::name('muse/login', 'login');
+Route::get('muse/login', ParentController::class, 'loginGet');
+
+Route::name('muse/signup', 'signup');
+Route::get('muse/signup', ParentController::class, 'signupGet');
 
