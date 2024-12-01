@@ -55,7 +55,7 @@
                         <p class="group-description">A group symbolizing inspiration and creativity through writing.</p>
                         <p class="community-type">Writing Group</p>
                         <div class="button-group">
-                        <a href="edit_writing_group.php?id=1" class="edit-btn">Edit</a>
+                        <a href="<?= route('communityAmbassador.editWritingGroup') ?>" class="edit-btn">Edit</a>
                         <button class="delete-btn">Delete</button>
                     </div>
 
