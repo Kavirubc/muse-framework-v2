@@ -6,22 +6,23 @@ use Kaviru\MuseCore\Database;
 
 class User extends Database
 {
-    protected $table = 'users';
-    protected $fillable = ['name', 'email', 'password', 'age'];
-    protected $readable = ['id', 'name', 'email', 'age', 'created_at'];
+    public $table = 'users';
+    protected $fillable = ['users_name', 'users_email', 'users_password', 'users_address', 'users_contactNumber'];
+    protected $readable = ['users_name', 'users_email', 'users_password', 'users_address', 'users_contactNumber'];
     protected $dataTypes = [
         'id' => 'int',
-        'name' => 'string',
-        'email' => 'string',
-        'password' => 'string',
-        'age' => 'int',
-        'created_at' => 'string'
+        'users_name' => 'string',
+        'users_email' => 'string',
+        'users_password' => 'string',
+        'users_address' => 'string',
+        'users_contactNumber' => 'string'
     ];
 
-    public string $name;
-    public string $email;
-    public string $password;
-    public int $age;
+    public string $users_name;
+    public string $users_email;
+    public string $users_password;
+    public int $users_address;
+    public int $users_contactNumber;
 
     public function __construct()
     {

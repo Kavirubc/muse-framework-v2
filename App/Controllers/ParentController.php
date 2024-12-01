@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Validations\SignUpValidation;
 use PDO;
 use Kaviru\MuseCore\Database;
 use Kaviru\MuseCore\Controller;
@@ -50,11 +51,30 @@ class ParentController extends Controller
         view('parentuser/login.php');
     }
     
-
     public function signupGet()
     {
         // Render the signup form view
         view('parentuser/signup.php');
     }
     
+    public function signupPost()
+    {
+        if(post("signupSubmit") ?? null !== null)
+        {
+            $email = post('email');
+            $name = post('name');
+            $password = post('password');
+            $confirmPassword = post('confirmPassword');
+            $address = post('address');
+            $contactNumber = post('contactNumber');
+
+            $signup = new SignUpValidation($email, $name, $password, $confirmPassword, $address, $contactNumber);
+
+            //Running error handlers and user sign up
+            $signup->signupUser();
+
+            //Going back to login page
+            redirect(route("login"));
+        }
+    }
 }

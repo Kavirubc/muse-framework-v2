@@ -85,13 +85,16 @@ INSERT INTO `events` (`events_id`, `events_title`, `events_description`, `events
 
 CREATE TABLE `users` (
   `users_id` int(11) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `contact_number` varchar(15) NOT NULL,
-  `user_role` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `users_email` varchar(255) NOT NULL,
+  `users_name` varchar(255) NOT NULL,
+  `users_password` varchar(255) NOT NULL,
+  `users_address` varchar(255) NOT NULL,
+  `users_contactNumber` varchar(15) NOT NULL,
+  `users_role` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `users`
+MODIFY COLUMN `users_role` ENUM('user', 'community_ambassador', 'admin') NOT NULL DEFAULT 'user';
 
 INSERT INTO `users` (`users_id`, `users_email`, `users_name`, `users_password`, `users_address`, `users_contactNumber`, `users_role`) VALUES
 (1, 'madarameegama7@gmail.com', 'Madara Meegama', '$2y$10$F38pKMac7eR84azeCXeEiOIZkNgsrIw9l99Td4.oX9ECD/gUaVr7y', '7/7, Pragathi Mawatha,Homagama', '0719589690', 'user'),

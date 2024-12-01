@@ -113,5 +113,5 @@ Route::get('muse/login', ParentController::class, 'loginGet');
 
 Route::name('muse/signup', 'signup');
 Route::get('muse/signup', ParentController::class, 'signupGet');
-// Route::post('muse/signup', ParentController::class, 'signupPost');
+Route::post('muse/signup', ParentController::class, 'signupPost');
 
