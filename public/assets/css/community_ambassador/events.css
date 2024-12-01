@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex; /* Make body a flex container for the sidebar */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed; /* Fixes the sidebar to the left corner */
+    top: 0;
+    left: 0;
+    width: 250px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures the sidebar stays above other content */
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.sidebar nav ul li a {
+    color: #333; /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: block; /* Makes the entire list item clickable */
+    padding: 10px 0;
+    align-items: center;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 8px; /* Adjust spacing */
+    font-size: 18px; /* Adjust icon size */
+}
+
+.sidebar nav ul li a:hover {
+    color: #4a90e2; /* Changes color on hover */
+}
+
+.sidebar nav ul li.active a {
+    color: black;
+    font-weight: 600;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo-container img {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* Main Content Styling */
+.container {
+    margin-left: 250px; /* Adds space for the fixed sidebar */
+    display: flex; /* Enables flexbox for the event card and calendar */
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 20px;
+    gap: 20px; /* Space between event cards and calendar */
+}
+
+/* Event Card Section */
+.sidebar1 {
+    width: 300px;
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.sidebar1 h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.event-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.event-card h6 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.event-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.event-card img.rounded-circle {
+    width: 40px; /* Adjust to your preferred size */
+    height: 40px;
+    object-fit: cover; /* Ensures proper cropping and scaling */
+}
+
+/* Calendar Section */
+.calendar {
+    flex-grow: 1; /* Calendar takes up remaining space */
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+#calendar {
+    padding: 10px;
+}
+
+/* Button Styles */
+button.btn-primary {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button.btn-outline-primary {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static; /* Sidebar becomes inline on small screens */
+        width: 100%; /* Takes full width */
+        height: auto; /* Adjusts to content height */
+    }
+
+    .container {
+        margin-left: 0; /* Removes margin when sidebar stacks */
+        flex-direction: column; /* Stacks content vertically */
+    }
+}

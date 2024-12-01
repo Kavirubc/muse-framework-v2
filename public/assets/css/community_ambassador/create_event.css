@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex; /* Make body a flex container for the sidebar */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed; /* Fixes the sidebar to the left corner */
+    top: 0;
+    left: 0;
+    width: 250px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures the sidebar stays above other content */
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.sidebar nav ul li a {
+    color: #333; /* Sets text color */
+    text-decoration: none; /* Removes underline */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: block; /* Makes the entire list item clickable */
+    padding: 10px 0;
+    align-items: center;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 8px; /* Adjust spacing */
+    font-size: 18px; /* Adjust icon size */
+}
+
+.sidebar nav ul li a:hover {
+    color: #4a90e2; /* Changes color on hover */
+}
+
+.sidebar nav ul li.active a {
+    color: black;
+    font-weight: 600;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo-container img {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #2ecc71;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container .btn {
+    text-align: center;
+    display: block;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.form-container .btn:hover {
+    background-color: #0056b3;
+}

@@ -4,7 +4,7 @@ use Kaviru\MuseCore\Route;
 use App\Controllers\AdminController;
 use App\Controllers\ChildController;
 use App\Controllers\PublicController;
-
+use App\Controllers\CommunityAmbassadorController;
 
 /*  ----------------------------------
 
@@ -13,7 +13,6 @@ use App\Controllers\PublicController;
     ----------------------------------  */
 
 # xamp based
-
 
 // Route::name('muse', 'index');
 // Route::get('muse/', PublicController::class, 'index');
@@ -67,3 +66,25 @@ Route::get('muse/child-creative-poem-writing', ChildController::class, 'childCre
 
 Route::name('muse/child-creative-song-writing', 'childCreSong');
 Route::get('muse/child-creative-song-writing', ChildController::class, 'childCreSong');
+
+
+
+// ------------------------ Amasha --------------------------//
+
+Route::name('muse/community-ambassador/communities', 'communityAmbassador.communities');
+Route::get('muse/community-ambassador/communities', CommunityAmbassadorController::class, 'communityGet');
+
+Route::name('muse/community-ambassador/events', 'communityAmbassador.events');
+Route::get('muse/community-ambassador/events', CommunityAmbassadorController::class, 'eventsGet');
+
+Route::name('muse/community-ambassador/createCommunityEvent', 'communityAmbassador.createCommunityEvent'); 
+Route::get('muse/community-ambassador/createCommunityEvent', CommunityAmbassadorController::class, 'createCommunityEventGet');
+
+Route::name('muse/community-ambassador/eventDetails', 'communityAmbassador.eventDetails'); 
+Route::get('muse/community-ambassador/eventDetails', CommunityAmbassadorController::class, 'eventDetailsGet');
+
+Route::name('muse/community-ambassador/writingGroups', 'communityAmbassador.writingGroups');
+Route::get('muse/community-ambassador/writingGroups', CommunityAmbassadorController::class, 'writingGroupGet'); 
+
+Route::name('muse/community-ambassador/writingGroupPosts', 'communityAmbassador.writingGroupPosts'); 
+
