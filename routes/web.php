@@ -15,8 +15,8 @@ use App\Controllers\CommunityAmbassadorController;
 
 # xamp based
 
-// Route::name('muse', 'index');
-// Route::get('muse/', PublicController::class, 'index');
+Route::name('muse', 'index');
+Route::get('muse/', PublicController::class, 'index');
 
 // Route::name('muse/test-database/create', 'test.database.create');
 // Route::get('muse/test-database/create', PublicController::class, 'testDatabaseCreate');
@@ -62,7 +62,7 @@ Route::get('muse/child-autobiography-details', ChildController::class, 'childAut
 Route::name('muse/child-creative-writing', 'childCreChapters');
 Route::get('muse/child-creative-writing', ChildController::class, 'childCreChapters');
 
-Route::name('muse/child-creative-poem-writing', 'childCrePeom');
+Route::name('muse/child-creative-poem-writing', 'childCrePoem');
 Route::get('muse/child-creative-poem-writing', ChildController::class, 'childCrePoem');
 
 Route::name('muse/child-creative-song-writing', 'childCreSong');
@@ -113,4 +113,5 @@ Route::get('muse/login', ParentController::class, 'loginGet');
 
 Route::name('muse/signup', 'signup');
 Route::get('muse/signup', ParentController::class, 'signupGet');
+Route::post('muse/signup', ParentController::class, 'signupPost');
 
