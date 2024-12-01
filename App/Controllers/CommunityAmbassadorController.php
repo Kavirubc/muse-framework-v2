@@ -47,6 +47,10 @@ class CommunityAmbassadorController extends Controller
     {
         return "POST method in Controller is working!";
     }
+    // public function communityAmbasssadorProfile()
+    // {
+    //     view('community_ambassador/community-ambassador-profile.php');
+    // }
     
 
 }

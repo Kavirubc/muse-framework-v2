@@ -10,7 +10,8 @@
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="sidebar">
+     <?php include 'adminsidebar.php'; ?>
+    <!-- <div class="sidebar">
         <li class="logo-container">
             <img src="../public/images/muse logo.png" alt="Muse Bookstore Logo">
         </li>
@@ -33,7 +34,7 @@
                 <li><a href="../includes/logout.inc.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </nav>
-    </div>
+    </div> -->
 
     <div class="main-content">
             <h1><center>Communities</center></h1>

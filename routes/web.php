@@ -90,6 +90,9 @@ Route::get('muse/community-ambassador/writingGroups', CommunityAmbassadorControl
 Route::name('muse/community-ambassador/writingGroupPosts', 'communityAmbassador.writingGroupPosts');
 Route::get('muse/community-ambassador/writingGroupPosts', CommunityAmbassadorController::class, 'writingGroupPostsGet');
 
+// Route::name('muse/community-ambassador/profile', 'communityAmbassador.profile');
+// Route::get('muse/community-ambassador/profile', CommunityAmbassadorController::class, 'communityAmbasssadorProfile');
+
 
 // ---------------------------------- Madara ------------------------------- //
 

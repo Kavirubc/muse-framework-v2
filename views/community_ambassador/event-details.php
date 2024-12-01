@@ -11,28 +11,7 @@
 </head>
 <body>
 <div class="sidebar">
-        <li class="logo-container">
-            <img src="../public/images/muse logo.png" alt="Muse Bookstore Logo">
-        </li>
-        <nav>
-            <ul>
-                <li class="active"><a href="user.php"><i class="fas fa-tachometer-alt"></i> Welcome to dashboard</a></li>
-                <li><a href="userprofile.php"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="books.php"><i class="fas fa-book"></i> Books</a></li>
-                <li><a href="communities.php"><i class="fas fa-users"></i> Communities</a></li>
-                <li><a href="blogs.php"><i class="fas fa-blog"></i> Blogs</a></li>
-                <li><a href="writing-groups.php"><i class="fas fa-pen"></i> Writing Groups</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
-            </ul>
-            <ul>
-                <li><a href="my-books.php"><i class="fas fa-bookmark"></i> My Books</a></li>
-                <li><a href="calendar.php"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
-                <li><a href="wishlist.php"><i class="fas fa-heart"></i> Wish-list</a></li>
-                <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                <li><a href="../includes/logout.inc.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-            </ul>
-        </nav>
+<?php include 'adminsidebar.php'; ?>
     </div>
 
 

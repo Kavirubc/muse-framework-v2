@@ -49,3 +49,8 @@
     padding: 0; /* Removes default padding */
     margin: 0; /* Removes default margin */
 }
+img {
+    width: 200px; 
+    height: 100px;
+    margin-right: 10px;
+}

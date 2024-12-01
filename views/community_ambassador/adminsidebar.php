@@ -12,20 +12,22 @@
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <li class="logo-container">
-            <img src="./public/images/muse logo.png" alt="Muse Bookstore Logo">
-        </li>
+        
+            <img src="../public/images/muse logo.png" alt="Muse Bookstore Logo">
+        
         <nav>
             <ul>
                 <li class="active"><a href="user.php"><i class="fas fa-tachometer-alt"></i> Welcome to dashboard</a></li>
                 <li><a href="index"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="admin"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="writing_groups"><i class="fas fa-book"></i>Writing Groups</a></li>
-                <li><a href="communities.php"><i class="fas fa-users"></i> Communities</a></li>
+                <li><a href="<?= route('communityAmbassador.writingGroups') ?>""><i class="fas fa-book"></i>Writing Groups</a></li>
+                <li><a href="<?= route('communityAmbassador.communities') ?>""><i class="fas fa-users"></i> Communities</a></li>
                 <li><a href="blogs.php"><i class="fas fa-blog"></i> Blogs</a></li>
-                <li><a href="calendar"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="<?= route('communityAmbassador.eventDetails') ?>""><i class="fas fa-calendar-alt"></i> Events</a></li>
                 <li><a href="notifications"><i class="fas fa-bell"></i> Notifications</a></li>
                 <li><a href="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
+              
             </ul>
         </nav>
     </div>
