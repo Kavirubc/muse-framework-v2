@@ -30,3 +30,7 @@ Route::post('muse/admin/login', AdminController::class, 'loginPost');
 Route::name('muse/admin/signup', 'admin.signup');
 Route::get('muse/admin/signup', AdminController::class, 'signupGet');
 Route::post('muse/admin/signup', AdminController::class, 'signupPost');
+
+
+// ----------------------gayashan------------------------//
+
