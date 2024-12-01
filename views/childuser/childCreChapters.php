@@ -18,11 +18,9 @@
      Embark on a journey of imagination and self-expression! This space is dedicated to nurturing your creativity, helping you craft stories, poems, and ideas that inspire and resonate. Whether you're a beginner or a seasoned writer, this is your haven to explore, experiment, and bring your thoughts to life. Let's turn ideas into art and words into magic!
    </p>
    <h2>
-    The topic you want
+   <a href="<?= route('childCreCha') ?>"> Start Writing Here</a>
    </h2>
-   <p>
-   Start writing here.
-   </p>
+   
   </div>
   <footer>
   <?php include 'footer.php'; ?>
