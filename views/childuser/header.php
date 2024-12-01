@@ -16,8 +16,8 @@ session_start();
 
         <li class="menu">
             <ul>
-                <li><a href="index">Home</a></li>
-                <li><a href="aboutus">About Us</a></li>
+                <li><a href="<?= route('childHome') ?>">Home</a></li>
+                <li><a href="aboutus">About us</a></li>
                 <li><a href="whymuse">Why Muse</a></li>
                 <li><a href="contact">Contact Us</a></li>
             </ul>

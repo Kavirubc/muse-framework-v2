@@ -26,7 +26,7 @@
     <img alt="painting" height="150" src="https://images.pexels.com/photos/9521671/pexels-photo-9521671.jpeg" width="150"/>
     <div class="news-content">
      <h3>
-     Creative Story Writing
+     <a href="<?= route('childCreChapters') ?>">Creative Story Writing</a>
      </h3>
      <p>
      Embark on an exciting journey of imagination. Unleash your creativity and let your stories come to life!
@@ -37,7 +37,7 @@
     <img alt="A group of children listening to a storyteller" height="150" src="https://storage.googleapis.com/a1aa/image/MzA7VNSW3h60H1X4muD4rPeQrfeIXwz1D93MA9arTOeo1rTPB.jpg" width="150"/>
     <div class="news-content">
      <h3>
-     Creative Poem Writing
+     <a href="<?= route('childCrePoem') ?>"> Creative Poem Writing</a>
      </h3>
      <p>
      Step into a world of wonder! Let captivating tales transport you to magical places and spark your imagination
@@ -48,7 +48,7 @@
     <img alt="A group of children listening to a storyteller" height="150" src="https://images.pexels.com/photos/2693200/pexels-photo-2693200.jpeg" width="150"/>
     <div class="news-content">
      <h3>
-     Creative Song Writing
+     <a href="<?= route('childCreSong') ?>">Creative Song Writing</a>
      </h3>
      <p>
      Dive into the fun, test your knowledge, solve puzzles, and uncover hidden literary treasures in an adventure like no other!
